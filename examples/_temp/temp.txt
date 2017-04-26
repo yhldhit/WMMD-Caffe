@@ -1,0 +1,3 @@
+./examples/images/cat_gray.jpg
+./examples/images/fish-bike.jpg
+./examples/images/cat.jpg

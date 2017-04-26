@@ -1,0 +1,14 @@
+net: "models/amazon_to_caltech/googlenet_train_val.prototxt"
+test_iter: 14
+test_interval: 200
+base_lr: 0.003162 #begin training at the learning rate in steps
+lr_policy: "step" #learning rate policy: drop the learning rate in "steps" by a factor of gamma every stepsize iterations
+gamma: 0.5 #multiply the learning rate by a factor of 0.5
+stepsize: 500 #drop the learning rate every 500 iterations
+display:0
+max_iter: 3000
+momentum: 0.9
+weight_decay: 0.0005
+snapshot: 5000
+snapshot_prefix: "models/amazon_to_caltech/googlemmd"
+solver_mode: GPU

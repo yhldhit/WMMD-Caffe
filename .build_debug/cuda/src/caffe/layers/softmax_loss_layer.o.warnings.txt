@@ -1,0 +1,8 @@
+src/caffe/layers/softmax_loss_layer.cu: In instantiation of ‘void caffe::SoftmaxWithLossLayer<Dtype>::Forward_gpu(const std::vector<caffe::Blob<Dtype>*>&, const std::vector<caffe::Blob<Dtype>*>&) [with Dtype = float]’:
+src/caffe/layers/softmax_loss_layer.cu:231:143:   required from here
+src/caffe/layers/softmax_loss_layer.cu:75:36: warning: ISO C++ does not support variable-length array types [-Wvla]
+       Dtype * prob_samp = new Dtype[dim];
+                                    ^
+src/caffe/layers/softmax_loss_layer.cu: In instantiation of ‘void caffe::SoftmaxWithLossLayer<Dtype>::Forward_gpu(const std::vector<caffe::Blob<Dtype>*>&, const std::vector<caffe::Blob<Dtype>*>&) [with Dtype = double]’:
+src/caffe/layers/softmax_loss_layer.cu:231:290:   required from here
+src/caffe/layers/softmax_loss_layer.cu:75:36: warning: ISO C++ does not support variable-length array types [-Wvla]
