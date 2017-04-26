@@ -23,7 +23,7 @@ Slight changes may not results instabilities.
 You will see the accuracy results once the script is finished. The detailed results could be found in files that are stored in the `./log`. And the tuned model will be stored in `model/amazon2caltech/`
 
 # Fine tune the model parameters 
-Three model parameters are tunned in our experiments, _i.e.,_ $\lambda$, $\beta$, $lr$ and please refer to the paper for the meaning of these parameters. Manually tuning them in net defination file, _i.e.,_ 'trainval.protxt', could be rather tedious. We provide python scripts to help tune these parameters which can be found in directory `script_fine_tune/`. To correctly run these scripts, please follow the instruction to install the Python runtime library of [Protobuf](https://github.com/google/protobuf). Also the Caffe python's interface should be compiled: `make pycaffe`.
+Three model parameters are tunned in our experiments, _i.e.,_ $\lambda$, $\beta$, $lr$ and please refer to the paper for the meaning of these parameters. Manually tuning them in net defination file, _i.e.,_ 'trainval.protxt', could be rather tedious. We provide python scripts to help tune these parameters which can be found in directory `script_fine_tune/`. To correctly run these scripts, please follow the instruction to install the Python runtime library of [Protobuf](https://github.com/google/protobuf). In addition, the Caffe python's interface should be compiled: `make pycaffe`.
 
 # Citation
 ```
