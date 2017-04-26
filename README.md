@@ -4,8 +4,8 @@ This is an implementation of CVPR17 paper "Mind the Class Weight Bias: Weighted 
 - softmax loss layer: Instead of ignoring the empirical loss on target domain, we modified the function so that logistic loss is added based on pseudo label. 
 - data layer: we add an parameter to the data label so that the number of classes is conveyed to mmd layer. 
 
-# Prerequists
-Here I list the some experimental enviorment:
+# 
+The machines configuration that run the experiments are specificied below:
 - OS: UNIX
 - GPU: TiTan X
 - CUDA: version 7.5
@@ -14,7 +14,7 @@ Here I list the some experimental enviorment:
 Slight changes may not results instabilities. 
 
 # Usage
-* prepare model: The model structure is specified in the relative path `model/task_name/train_val.prototxt`, e.g., when we transfer from amazon to caltech in *office-10+caltech-10* dataset, replace the task_name with `amazon_to_caltech`. The pretrained model on ImageNet is stored in `model/`, which is used as an initialization. 
+* prepare model: The `bvlc_reference_caffenet` and `bvlc_googlenet` are used as initialzation for Alexnet and GoogleNet, respectively. They can be download from [here](http://caffe.berkeleyvision.org/model_zoo.html). The model structure is specified in the relative path `model/task_name/train_val.prototxt`, *e.g.,* when we transfer from amazon to caltech in *office-10+caltech-10* dataset, replace the task_name with `amazon_to_caltech`. 
 * prepare data: Since we reach the raw images on the disk when training, all the images file path need to be written into the `.txt` file, kept in `data/task_name/` directory. For example, data/amazon_to_caltech/train\(value\).txt. To constrcuct such txtfile, a python script is offered in file `images/code/data_constructor.py`. Following are the main steps:
   * change into the directory `image/code/`: `cd image/code`
   * `python data_constructor.py`. You will be asked to input the source and target domain name, e.g., `amazon` and `caltech`, respectively.
