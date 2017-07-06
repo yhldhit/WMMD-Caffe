@@ -32,9 +32,9 @@ def ListFilesToTxt(dir_,trainfile,testfile,wildcard,recursion,sdomain,tdomain):
 os.chdir("/home/hsi/mmd-caffe/images")#change to the directory of images
 dir_= os.getcwd();#get the current work
 #print "input source domain:"
-sdomain = input('input source domain,input:')
+sdomain = input('input source domain:')
 #print "input target domain:"
-tdomain = raw_input('input target domain,raw_input:')
+tdomain = input('input target domain:')
 filesuffix = sdomain[0]+str(2)+tdomain[0]+'.txt'
 trainfile='train'+filesuffix
 testfile = "test"+filesuffix
